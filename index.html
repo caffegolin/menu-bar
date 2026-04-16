@@ -8,7 +8,7 @@
   <meta name="description" content="Menù del bar - dalla colazione al dopocena">
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -20,19 +20,20 @@
     }
 
     .overlay {
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      backdrop-filter: blur(6px);
     }
 
     .container {
-      padding: 30px 25px;
-      max-width: 420px;
+      padding: 30px;
+      max-width: 500px;
+      animation: fadeIn 1.2s ease;
     }
 
+    /* LOGO PIÙ GRANDE */
     .logo {
       width: 140px;
       margin-bottom: 25px;
@@ -40,66 +41,92 @@
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 30px;
-      margin-bottom: 8px;
+      font-size: 28px;
+      margin-bottom: 10px;
       letter-spacing: 1px;
+    }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 36px; }
     }
 
     p {
       font-size: 15px;
-      color: #ccc;
-      margin-bottom: 35px;
+      color: #ddd;
+      margin-bottom: 40px;
     }
 
-    /* BOTTONI MODERNI */
-    .button, .instagram-btn {
+    /* Bottone menu */
+    .button {
       display: block;
       margin: 0 auto;
-      padding: 15px;
-      width: 100%;
-      border-radius: 16px;
+      padding: 16px 34px;
+      width: 80%;
+      max-width: 280px;
+      background: linear-gradient(135deg, #d4af37, #b8962e);
+      color: black;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(212,175,55,0.6);
+    }
+
+    .button:active {
+      transform: scale(0.97);
+    }
+
+    /* Bottone Instagram */
+    .instagram-btn {
+      display: block;
+      margin: 15px auto 0;
+      padding: 14px 30px;
+      width: 80%;
+      max-width: 280px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: 500;
       font-size: 15px;
-      transition: all 0.25s ease;
-    }
-
-    /* Menu */
-    .button {
-      background: #d4af37;
-      color: black;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    /* Instagram */
-    .instagram-btn {
-      margin-top: 12px;
-      background: #1a1a1a;
       color: white;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
 
-    /* HOVER MODERNO */
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+      background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+      );
+
+      background-size: 200% 200%;
+      transition: all 0.3s ease;
     }
 
     .instagram-btn:hover {
-      background: #262626;
-      transform: translateY(-2px);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(214,41,118,0.6);
+      background-position: right center;
     }
 
-    .button:active, .instagram-btn:active {
-      transform: scale(0.98);
+    .instagram-btn:active {
+      transform: scale(0.97);
     }
 
     .footer {
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 12px;
-      color: #888;
+      color: #aaa;
     }
 
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
@@ -113,15 +140,15 @@
       <p>Dalla colazione al dopocena</p>
 
       <a class="button" href="menu.pdf" target="_blank">
-        🍽️ Scopri il menù
+        Scopri il menù
       </a>
 
-      <a class="instagram-btn" href="https://instagram.com/caffegolin" target="_blank">
-        📸 Instagram
+      <a class="instagram-btn" href="https://instagram.com/caffe_golin" target="_blank">
+        📸 Seguici su Instagram
       </a>
 
       <div class="footer">
-        © 2026 Il tuo Bar
+        © 2026 Caffè Golin
       </div>
 
     </div>
