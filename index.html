@@ -4,34 +4,95 @@
   <meta charset="UTF-8">
   <title>Menù</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: #f5f5f5;
       text-align: center;
-      padding: 20px;
-      background: #f5f5f5;
     }
-    a {
+
+    .container {
+      padding: 30px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    img.logo {
+      width: 120px;
+      margin: 30px auto 10px;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    a.button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 15px 25px;
-      background: black;
-      color: white;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #c9a96e, #a67c3b);
+      color: #000;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: 0.3s;
     }
+
+    a.button:hover {
+      opacity: 0.85;
+    }
+
+    iframe {
+      margin-top: 40px;
+      width: 100%;
+      height: 75vh;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #777;
+    }
+
   </style>
 </head>
 <body>
 
-  <img src="logo.png" alt="Logo Bar" style="width:150px; margin-top:20px;">
- 
-  <h1>Il nostro menù</h1>
+  <div class="container">
 
-  <a href="menu.pdf" target="_blank">
-    Apri il menù
-  </a>
+    <img src="logo.png" alt="Logo" class="logo">
+
+    <h1>Il nostro menù</h1>
+    <p>Scopri le nostre proposte</p>
+
+    <a class="button" href="menu.pdf" target="_blank">
+      Apri il menù
+    </a>
+
+    <iframe src="menu.pdf"></iframe>
+
+    <div class="footer">
+      © 2026 Il tuo Bar
+    </div>
+
+  </div>
 
 </body>
 </html>
